@@ -103,12 +103,13 @@
                     elem.id = 'print-table';
                     var tds = elem.getElementsByTagName('td');
                     for(var i = 0, content, div; i < tds.length; i++){
-                        content = tds[i].innerHTML;
-                        tds[i].innerHTML = '';
-                        div = document.createElement('div');
-                        div.className = 'avoidPageBreak';
-                        div.innerHTML = content;
-                        tds[i].appendChild(div);
+                        //content = tds[i].innerHTML;
+                        tds[i].classList.add('avoidPageBreak');
+                        //tds[i].innerHTML = '';
+                        //div = document.createElement('div');
+                        //div.className = 'avoidPageBreak';
+                        //div.innerHTML = content;
+                        //tds[i].appendChild(div);
                     }
                     element[0] = elem;
                 },1000);
